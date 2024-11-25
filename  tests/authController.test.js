@@ -1,4 +1,3 @@
-// tests/authController.test.js
 const request = require('supertest');
 const app = require('../index');
 const User = require('../models/User');

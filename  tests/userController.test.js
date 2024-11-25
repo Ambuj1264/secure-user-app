@@ -1,4 +1,3 @@
-// tests/userController.test.js
 const request = require('supertest');
 const app = require('../index');
 const User = require('../models/User');
@@ -22,7 +21,6 @@ describe('User Controller', () => {
   it('should return 404 for invalid user id', async () => {
     const response = await request(app)
       .get('/api/users/invalidid');
-
     expect(response.status).toBe(404);
     expect(response.body.error).toBe('User not found!');
   });
